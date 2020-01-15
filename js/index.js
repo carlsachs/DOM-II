@@ -31,6 +31,7 @@ const bg1 = document.querySelector(".text-content");
 
 bg1.addEventListener("mousedown", () => {
     bg1.style.visibility = "hidden"
+    bg1.stopPropagation();
 });
 
 const pic = document.querySelectorAll("img");
