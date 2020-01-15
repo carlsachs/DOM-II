@@ -3,6 +3,8 @@ const logo = document.querySelector('.logo-heading');
 
 logo.addEventListener("mouseover", () => {
     logo.style.color = "green"
+    gsap.to(".logo-heading", {duration: 2, x: 300});
+    logo.stopPropagation();
 });
 
 logo.addEventListener("mouseleave", () => {
@@ -25,19 +27,20 @@ const h2 = document.querySelectorAll("h2");
 
 h2[0].addEventListener("wheel", () => {
     h2[0].style.color = " red "
+    gsap.to("h2", {duration: 3, x: 100, y: 100, scale: 2, skewX: 45, rotation: 180});
 });
 
 const bg1 = document.querySelector(".text-content");
 
 bg1.addEventListener("mousedown", () => {
     bg1.style.visibility = "hidden"
-    bg1.stopPropagation();
 });
 
 const pic = document.querySelectorAll("img");
 
 pic[1].addEventListener("mouseout", () => {
     pic[1].style.webkitTransform = "rotate(45deg)";
+    gsap.to("img", {duration: 3, rotation: 360, scale: 0.5});
 });
 
 pic[2].addEventListener("mouseup", () => {
